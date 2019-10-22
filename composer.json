@@ -1,0 +1,10 @@
+{
+    "name": "queqq99/http_manager",
+    "type": "library",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "queqq99\\http_manager\\": "src/"
+        }
+    }
+}
