@@ -4,6 +4,6 @@ class lib1
 {
 	function getData()
 	{
-		return '====data====';
+		return 'xx====data====xx';
 	}
 }
