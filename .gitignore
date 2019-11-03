@@ -1,1 +1,6 @@
 ws.code-workspace
+.buildpath
+.idea/
+.project
+.settings/
+.vscode/
