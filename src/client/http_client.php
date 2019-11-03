@@ -40,6 +40,37 @@ class http_client
 	}
 
 	/*
+	 * GETリクエスト実行
+	 *
+	 * @param string $req_url リクエストURL
+	 * @return boolean $result 処理結果
+	 */
+	function requestHttpGet(string $req_url = '')
+	{
+	    $result = true;
+
+	    //ヘッダー設定
+	    if(!empty($this->header_list))
+	    {
+	        $this->curl_opt_list[CURLOPT_HTTPHEADER] = $this->header_list;
+	    }
+
+	    $curl_handle = curl_init();
+	    //オプション指定
+	    curl_setopt_array($curl_handle, $this->curl_opt_list);
+	    //リクエスト実行
+	    $this->response_value = curl_exec($curl_handle);
+	    curl_close($curl_handle);
+
+	    if($this->response_value === false)
+	    {
+	        $result = false;
+	    }
+
+	    return $result;
+	}
+
+	/*
 	 * POSTリクエスト実行
 	 *
 	 * @param string $req_url リクエストURL

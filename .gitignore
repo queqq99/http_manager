@@ -4,4 +4,4 @@ ws.code-workspace
 .project
 .settings/
 .vscode/
-composer.json
+vendor/
