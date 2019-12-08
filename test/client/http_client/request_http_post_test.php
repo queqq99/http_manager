@@ -44,6 +44,7 @@ class request_http_post_test
         $this->reflection_property_list['header_list']->setValue($this->http_client, ['1111', '22222', 'test' => 'hedaer']);
         foreach($this->reflection_property_list as $key => $reflection_property_list)
         {
+            echo PHP_EOL.'========================'.$key.PHP_EOL;
             var_dump($reflection_property_list->getValue($this->http_client));
         }
         //POST値設定
